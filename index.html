@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mahadi Hassan is a Technical Lead focused on backend systems, AWS infrastructure, edge platforms, and reliability-driven engineering."
+      content="Mahadi Hassan is a Technical Lead focused on backend systems, AWS infrastructure, GraphQL, gRPC, edge platforms, and reliability-driven engineering."
     />
-    <meta name="theme-color" content="#132238" />
+    <meta name="theme-color" content="#0f172a" />
     <meta property="og:title" content="Mahadi Hassan | Technical Lead" />
     <meta
       property="og:description"
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -40,11 +40,11 @@
         <section class="hero section reveal">
           <div class="hero-copy">
             <p class="eyebrow">Technical Lead | Backend, Platform & AWS</p>
-            <h1>Production systems for cloud, edge, and the teams behind them.</h1>
+            <h1>Reliable backend and cloud systems, built simply.</h1>
             <p class="hero-text">
               I build and operate backend services, AWS infrastructure, and
-              IoT-connected platforms with a strong bias for reliability,
-              practical architecture, and hands-on engineering leadership.
+              edge-connected platforms with a focus on reliability, practical
+              architecture, and hands-on engineering leadership.
             </p>
 
             <div class="hero-actions">
@@ -65,100 +65,63 @@
                 Copy Email
               </button>
             </div>
-
-            <ul class="hero-points" aria-label="Highlights">
-              <li>Built systems supporting 6,000+ edge devices across 900+ sites</li>
-              <li>Delivered 10+ production microservices across IoT and cloud workflows</li>
-              <li>Reduced provisioning effort by roughly 40% with automation</li>
-            </ul>
           </div>
 
-          <aside class="hero-panel">
-            <div class="portrait-card">
-              <img
-                src="assets/profile.jpeg"
-                alt="Portrait of Mahadi Hassan"
-                class="portrait"
-              />
-              <div class="signal-card">
-                <span class="signal-label">Based in</span>
-                <strong>Colombo, Sri Lanka</strong>
-              </div>
-            </div>
-
-            <div class="metrics-card">
-              <article>
-                <span class="metric-value">6+</span>
-                <span class="metric-label">years in production engineering</span>
-              </article>
-              <article>
-                <span class="metric-value">5+</span>
-                <span class="metric-label">engineers mentored directly</span>
-              </article>
-              <article>
-                <span class="metric-value">AWS</span>
-                <span class="metric-label">cloud, Terraform, Docker, CI/CD</span>
-              </article>
+          <aside class="hero-card">
+            <img
+              src="assets/profile.jpeg"
+              alt="Portrait of Mahadi Hassan"
+              class="portrait"
+            />
+            <div class="hero-card-copy">
+              <p>Colombo, Sri Lanka</p>
+              <strong>6+ years across backend, cloud, IoT, and support-heavy delivery.</strong>
             </div>
           </aside>
         </section>
 
-        <section id="about" class="section intro-grid reveal">
-          <div>
+        <section class="metrics section reveal" aria-label="Highlights">
+          <article class="metric-card">
+            <strong>6,000+</strong>
+            <span>edge devices supported</span>
+          </article>
+          <article class="metric-card">
+            <strong>900+</strong>
+            <span>sites connected</span>
+          </article>
+          <article class="metric-card">
+            <strong>10+</strong>
+            <span>microservices delivered</span>
+          </article>
+          <article class="metric-card">
+            <strong>40%</strong>
+            <span>faster provisioning via automation</span>
+          </article>
+        </section>
+
+        <section id="about" class="section section-block reveal">
+          <div class="section-heading">
             <p class="section-label">About</p>
-            <h2>Engineering with ownership, clarity, and operational discipline.</h2>
+            <h2>Hands-on engineering with a strong bias for clarity and reliability.</h2>
           </div>
-          <div class="intro-copy">
+          <div class="two-column-copy">
             <p>
               I work across backend services, infrastructure, automation, and
-              incident-heavy production environments. My focus is not just
-              shipping code, but building systems that teams can trust under
-              load, during failures, and through long-term evolution.
+              production support. My focus is on systems that are maintainable,
+              observable, and dependable under load.
             </p>
             <p>
-              Recent work spans IoT platforms, HVAC edge integrations,
-              Terraform-based AWS provisioning, Level 2 support leadership, and
-              debugging across device, network, application, and data layers.
+              Recent work spans AWS provisioning, IoT and HVAC edge workflows,
+              Level 2 support leadership, and debugging across device, network,
+              application, and data layers.
             </p>
           </div>
         </section>
 
-        <section class="section spotlight reveal">
-          <div class="spotlight-card">
-            <p class="section-label">Selected Wins</p>
-            <div class="spotlight-grid">
-              <article>
-                <h3>Reliability at Scale</h3>
-                <p>
-                  Helped build and operate an IoT platform serving enterprise
-                  sites across the United States with real-time monitoring and
-                  control flows.
-                </p>
-              </article>
-              <article>
-                <h3>Edge Automation</h3>
-                <p>
-                  Automated DLC replacement and edge provisioning workflows
-                  using Ansible, cutting deployment time and reducing manual
-                  error rates.
-                </p>
-              </article>
-              <article>
-                <h3>Hands-On Leadership</h3>
-                <p>
-                  Guided backend, mobile, and support delivery while mentoring
-                  engineers on debugging quality, issue ownership, and system
-                  thinking.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="experience" class="section reveal">
+        <section id="experience" class="section section-block reveal">
           <div class="section-heading">
             <p class="section-label">Experience</p>
-            <h2>Career built around backend systems, edge platforms, and support-heavy delivery.</h2>
+            <h2>Built around backend systems, edge platforms, and operational ownership.</h2>
           </div>
 
           <div class="timeline">
@@ -242,16 +205,16 @@
           </div>
         </section>
 
-        <section id="stack" class="section tech-section reveal">
+        <section id="stack" class="section section-block reveal">
           <div class="section-heading">
             <p class="section-label">Stack</p>
-            <h2>Tools and platforms I reach for in delivery, operations, and debugging.</h2>
+            <h2>Core tools, protocols, and delivery areas.</h2>
           </div>
 
           <div class="stack-grid">
             <article class="stack-card">
               <h3>Backend & Services</h3>
-              <p>Node.js, NestJS, Go, Python, REST APIs, microservices</p>
+              <p>Node.js, NestJS, Go, Python, REST APIs, GraphQL, gRPC, microservices</p>
             </article>
             <article class="stack-card">
               <h3>Cloud & Infrastructure</h3>
@@ -267,7 +230,7 @@
             </article>
             <article class="stack-card">
               <h3>Systems & Protocols</h3>
-              <p>IoT platforms, edge/cloud integration, Modbus/TCP, LoRaWAN</p>
+              <p>IoT platforms, edge and cloud integration, Modbus/TCP, LoRaWAN</p>
             </article>
             <article class="stack-card">
               <h3>Leadership</h3>
@@ -293,13 +256,13 @@
           </div>
         </section>
 
-        <section id="contact" class="section contact-section reveal">
+        <section id="contact" class="section section-block reveal">
           <div class="contact-card">
             <div>
               <p class="section-label">Contact</p>
-              <h2>Open to conversations around backend, platform, and reliability-focused work.</h2>
+              <h2>Open to backend, platform, and reliability-focused work.</h2>
               <p>
-                The quickest route is email. You can also review my profile and
+                Email is the fastest route. You can also review my profile and
                 recent work on LinkedIn and GitHub.
               </p>
             </div>
