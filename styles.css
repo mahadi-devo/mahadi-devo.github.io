@@ -12,7 +12,7 @@
   --radius-lg: 22px;
   --radius-md: 14px;
   --radius-sm: 10px;
-  --content-width: min(1100px, calc(100vw - 2rem));
+  --content-width: min(1120px, calc(100vw - 2rem));
 }
 
 *,
@@ -110,7 +110,7 @@ button {
 }
 
 .intro-layout {
-  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
   align-items: start;
   padding-top: 1.65rem;
 }
@@ -120,7 +120,8 @@ button {
 .sidebar-card,
 .main-card,
 .stat-card,
-.experience-item {
+.company-block,
+.role-item {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -144,7 +145,7 @@ button {
 
 .portrait {
   width: 100%;
-  max-width: 150px;
+  max-width: 160px;
   aspect-ratio: 1 / 1.12;
   border-radius: var(--radius-md);
   object-fit: cover;
@@ -153,19 +154,52 @@ button {
 
 .profile-copy {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.32rem;
+}
+
+.profile-copy h2 {
+  max-width: none;
 }
 
 .role-line,
 .profile-copy p,
 .hero-text,
 .sidebar-card p,
-.stack-list p,
-.experience-body p,
-.experience-body li,
+.skill-groups p,
+.education-list p,
+.role-item li,
 .contact-actions a,
-.site-footer {
+.site-footer,
+.profile-facts dd {
   color: var(--muted);
+}
+
+.profile-facts {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.profile-facts div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.profile-facts dt,
+.eyebrow,
+.section-label,
+.role-head span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.profile-facts dd {
+  margin: 0;
+  font-size: 0.96rem;
 }
 
 .profile-links {
@@ -175,7 +209,7 @@ button {
 }
 
 .profile-links a {
-  padding: 0.52rem 0.8rem;
+  padding: 0.55rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-strong);
@@ -184,17 +218,6 @@ button {
 
 .overview-panel {
   background: linear-gradient(180deg, #fffdf8 0%, #fbf6ee 100%);
-}
-
-.eyebrow,
-.section-label,
-.experience-meta span {
-  margin: 0 0 0.7rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
 }
 
 h1,
@@ -207,13 +230,13 @@ h3 {
 }
 
 h1 {
-  max-width: 13ch;
-  font-size: clamp(2.3rem, 4.8vw, 3.9rem);
+  max-width: 12ch;
+  font-size: clamp(2.25rem, 4.6vw, 3.85rem);
 }
 
 h2 {
   max-width: 16ch;
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
 }
 
 h3 {
@@ -221,7 +244,7 @@ h3 {
 }
 
 .hero-text {
-  max-width: 60ch;
+  max-width: 72ch;
   margin: 0.95rem 0 0;
   font-size: 0.98rem;
 }
@@ -264,7 +287,9 @@ h3 {
 }
 
 .button-secondary:hover,
-.button-secondary:focus-visible {
+.button-secondary:focus-visible,
+.profile-links a:hover,
+.profile-links a:focus-visible {
   background: var(--accent-soft);
   border-color: rgba(61, 90, 71, 0.24);
 }
@@ -296,7 +321,7 @@ h3 {
 }
 
 .content-layout {
-  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+  grid-template-columns: minmax(290px, 330px) minmax(0, 1fr);
   align-items: start;
 }
 
@@ -311,25 +336,24 @@ h3 {
   top: 5.6rem;
 }
 
-.stack-list {
+.skill-groups,
+.education-list {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
-.stack-list p,
-.sidebar-card p,
-.experience-body p {
-  margin: 0.5rem 0 0;
+.skill-groups p,
+.education-list p {
+  margin: 0.45rem 0 0;
 }
 
-.credential-list,
-.experience-body ul {
+.credential-list {
   margin: 0.8rem 0 0;
   padding-left: 1.1rem;
+  color: var(--muted);
 }
 
-.credential-list li + li,
-.experience-body li + li {
+.credential-list li + li {
   margin-top: 0.35rem;
 }
 
@@ -354,46 +378,52 @@ h3 {
   margin-bottom: 1.15rem;
 }
 
-.focus-grid {
+.company-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.focus-grid article {
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, #fffdf8 0%, #faf6ee 100%);
-}
-
-.focus-grid p {
-  margin: 0.55rem 0 0;
-  color: var(--muted);
-}
-
-.experience-list {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.experience-item {
-  display: grid;
-  grid-template-columns: minmax(160px, 190px) minmax(0, 1fr);
   gap: 1rem;
-  padding: 1.2rem;
+}
+
+.company-block {
+  padding: 1.15rem;
   background: rgba(255, 253, 248, 0.96);
 }
 
-.experience-meta {
-  display: grid;
-  align-content: start;
-  gap: 0.35rem;
+.company-header {
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(221, 212, 198, 0.84);
 }
 
-.experience-meta strong {
-  font-size: 0.94rem;
-  line-height: 1.4;
+.role-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.role-item {
+  padding: 1rem;
+  background: linear-gradient(180deg, #fffdf8 0%, #faf6ee 100%);
+}
+
+.role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+}
+
+.role-head strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.role-item ul {
+  margin: 0.85rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.role-item li + li {
+  margin-top: 0.42rem;
 }
 
 .site-footer {
@@ -424,16 +454,14 @@ h3 {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1020px) {
   .intro-layout,
-  .content-layout,
-  .focus-grid,
-  .experience-item {
+  .content-layout {
     grid-template-columns: 1fr;
   }
 
-  .sidebar-column,
-  .profile-panel {
+  .profile-panel,
+  .sidebar-column {
     position: static;
   }
 
@@ -443,6 +471,48 @@ h3 {
 
   h2 {
     max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .company-block,
+  .role-item,
+  .profile-panel,
+  .overview-panel,
+  .sidebar-card,
+  .main-card {
+    padding: 1rem;
+  }
+
+  .profile-panel {
+    grid-template-columns: 108px 1fr;
+    align-items: start;
+  }
+
+  .portrait {
+    width: 108px;
+  }
+
+  .profile-links,
+  .profile-facts {
+    grid-column: 1 / -1;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-head {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -467,39 +537,6 @@ h3 {
 
   .intro-layout {
     padding-top: 1.2rem;
-  }
-
-  .profile-panel,
-  .overview-panel,
-  .sidebar-card,
-  .main-card,
-  .experience-item {
-    padding: 1rem;
-  }
-
-  .profile-panel {
-    grid-template-columns: 96px 1fr;
-    align-items: center;
-  }
-
-  .portrait {
-    width: 96px;
-  }
-
-  .profile-links {
-    grid-column: 1 / -1;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
-  }
-
-  .stat-grid {
-    grid-template-columns: 1fr;
   }
 
   h1 {
