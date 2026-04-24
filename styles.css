@@ -97,6 +97,15 @@ button {
   color: var(--accent);
 }
 
+.company-link {
+  transition: color 180ms ease;
+}
+
+.company-link:hover,
+.company-link:focus-visible {
+  color: var(--accent);
+}
+
 .section {
   padding: 1.35rem 0;
 }
