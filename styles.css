@@ -170,6 +170,10 @@ h2 {
   font-size: clamp(1.35rem, 2.5vw, 2rem);
 }
 
+.wide-heading {
+  max-width: none;
+}
+
 h3 {
   font-size: 0.95rem;
 }
