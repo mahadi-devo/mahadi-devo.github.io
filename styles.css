@@ -106,7 +106,7 @@ button {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 260px);
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 220px);
   gap: 1rem;
   padding-top: 1.75rem;
 }
@@ -229,19 +229,22 @@ h3 {
   display: grid;
   gap: 0.8rem;
   align-content: start;
+  justify-items: start;
 }
 
 .portrait {
-  width: min(100%, 190px);
-  aspect-ratio: 4 / 4.8;
+  width: min(100%, 150px);
+  aspect-ratio: 1 / 1.15;
   border-radius: var(--radius-md);
   object-fit: cover;
-  margin: 0 auto;
+  object-position: center 18%;
+  margin: 0;
 }
 
 .hero-card-copy {
   display: grid;
   gap: 0.28rem;
+  max-width: 18ch;
 }
 
 .hero-card-copy p {
@@ -458,6 +461,15 @@ h3 {
 
   .hero {
     padding-top: 1.2rem;
+  }
+
+  .hero-card {
+    grid-template-columns: 112px 1fr;
+    align-items: center;
+  }
+
+  .portrait {
+    width: 112px;
   }
 
   .metrics,
