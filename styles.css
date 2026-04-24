@@ -166,7 +166,7 @@ h1 {
 }
 
 h2 {
-  max-width: 18ch;
+  max-width: none;
   font-size: clamp(1.35rem, 2.5vw, 2rem);
 }
 
@@ -403,9 +403,11 @@ h3 {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  h2 {
-    max-width: none;
+@media (min-width: 901px) {
+  .section-heading h2 {
+    white-space: nowrap;
   }
 }
 
