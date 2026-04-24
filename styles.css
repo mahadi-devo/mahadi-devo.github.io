@@ -170,10 +170,6 @@ h2 {
   font-size: clamp(1.35rem, 2.5vw, 2rem);
 }
 
-.wide-heading {
-  max-width: none;
-}
-
 h3 {
   font-size: 0.95rem;
 }
@@ -281,10 +277,6 @@ h3 {
 .summary-card {
   display: grid;
   gap: 0.95rem;
-}
-
-.summary-card .section-heading h2 {
-  max-width: none;
 }
 
 .lead-paragraph {
@@ -414,23 +406,6 @@ h3 {
 
   h2 {
     max-width: none;
-  }
-}
-
-@media (min-width: 901px) {
-  .summary-card {
-    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-    column-gap: 2rem;
-    row-gap: 0.8rem;
-    align-items: start;
-  }
-
-  .summary-card .section-heading {
-    margin-bottom: 0;
-  }
-
-  .summary-card > .lead-paragraph {
-    grid-column: 2;
   }
 }
 
