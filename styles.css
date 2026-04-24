@@ -279,6 +279,10 @@ h3 {
   gap: 0.95rem;
 }
 
+.summary-card .section-heading h2 {
+  max-width: none;
+}
+
 .lead-paragraph {
   margin: 0;
   max-width: 78ch;
@@ -406,6 +410,23 @@ h3 {
 
   h2 {
     max-width: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .summary-card {
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+    column-gap: 2rem;
+    row-gap: 0.8rem;
+    align-items: start;
+  }
+
+  .summary-card .section-heading {
+    margin-bottom: 0;
+  }
+
+  .summary-card > .lead-paragraph {
+    grid-column: 2;
   }
 }
 
